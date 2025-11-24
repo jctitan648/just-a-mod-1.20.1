@@ -1,4 +1,11 @@
 {
+  "creativetab.justamod_item_tab": "Just Some Items",
+
   "item.justamod.sapphire": "Sapphire",
-  "item.justamod.wooden_core": "Lignum Core"
+
+  "item.justamod.wooden_core": "Lignum Core",
+
+  "item.justamod.wooden_sword_t2": "Wooden Sword",
+
+  "block.justamod.sapphire_block": "Block of Sapphire"
 }

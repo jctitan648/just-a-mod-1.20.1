@@ -1,6 +1,8 @@
 package net.jcquestmark.justamod;
 
 import com.mojang.logging.LogUtils;
+import net.jcquestmark.justamod.block.ModBlocks;
+import net.jcquestmark.justamod.item.ModCreativeModeTabs;
 import net.jcquestmark.justamod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,7 +31,11 @@ public class JustAMod {
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

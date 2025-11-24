@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "justamod:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "justamod:sapphire",
+    "count": 9
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "000",
+    "000",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "justamod:sapphire"
+    }
+  },
+  "result": {
+    "item": "justamod:sapphire_block"
+  }
+}

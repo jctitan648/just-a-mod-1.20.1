@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "000",
+    "0T0",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "#minecraft:planks"
+    },
+    "T": {
+      "item": "minecraft:wooden_sword"
+    }
+  },
+  "result": {
+    "item": "justamod:wooden_sword_t2"
+  }
+}
