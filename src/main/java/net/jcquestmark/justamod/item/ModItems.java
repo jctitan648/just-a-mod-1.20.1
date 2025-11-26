@@ -1,8 +1,9 @@
 package net.jcquestmark.justamod.item;
 
 import net.jcquestmark.justamod.JustAMod;
+import net.jcquestmark.justamod.item.tools.woodenline.WoodenAxeT2Item;
+import net.jcquestmark.justamod.item.tools.woodenline.WoodenSwordT2Item;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,8 +18,8 @@ public class ModItems {
     public static final RegistryObject<Item> WOODEN_CORE = ITEMS.register("wooden_core",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> WOODEN_SWORD_T2 = ITEMS.register("wooden_sword_t2",
-            () -> new SwordItem(ModToolTiers.WOOD_T2,2,-2.4f, new Item.Properties()));
+    public static final RegistryObject<Item> WOODEN_SWORD_T2 = ITEMS.register("wooden_sword_t2", () -> new WoodenSwordT2Item());
+    public static final RegistryObject<Item> WOODEN_AXE_T2 = ITEMS.register("wooden_axe_t2", () -> new WoodenAxeT2Item());
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

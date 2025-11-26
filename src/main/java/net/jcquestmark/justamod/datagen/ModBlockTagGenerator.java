@@ -24,6 +24,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 ;
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                ;
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 ;
         this.tag(BlockTags.NEEDS_IRON_TOOL)

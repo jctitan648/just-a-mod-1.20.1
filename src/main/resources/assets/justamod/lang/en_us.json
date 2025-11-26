@@ -6,6 +6,30 @@
   "item.justamod.wooden_core": "Lignum Core",
 
   "item.justamod.wooden_sword_t2": "Wooden Sword",
+  "item.justamod.wooden_sword_t3": "Wooden Sword",
+  "item.justamod.wooden_sword_t4": "Wooden Sword",
+  "item.justamod.wooden_sword_t5": "Wooden Sword",
+  "item.justamod.wooden_sword_t6": "Wooden Sword",
+
+  "item.justamod.wooden_axe_t2": "Wooden Axe",
+  "item.justamod.wooden_axe_t3": "Wooden Axe",
+  "item.justamod.wooden_axe_t4": "Wooden Axe",
+  "item.justamod.wooden_axe_t5": "Wooden Axe",
+  "item.justamod.wooden_axe_t6": "Wooden Axe",
+
+  "tooltip.justamod.tier1": "§7Tier 1",
+  "tooltip.justamod.tier2": "§7Tier 2",
+  "tooltip.justamod.tier3": "§7Tier 3",
+  "tooltip.justamod.tier4": "§7Tier 4",
+  "tooltip.justamod.tier5": "§7Tier 5",
+  "tooltip.justamod.tier6": "§7Tier 6",
+  "tooltip.justamod.tier7": "§7Tier 7",
+  "tooltip.justamod.tier8": "§7Tier 8",
+  "tooltip.justamod.tier9": "§7Tier 9",
+  "tooltip.justamod.tier10": "§7Tier 10",
+
+  "tooltip.justamod.lv1": "§7Level 1",
+  "tooltip.justamod.lv2": "§7Level 2",
 
   "block.justamod.sapphire_block": "Block of Sapphire"
 }
