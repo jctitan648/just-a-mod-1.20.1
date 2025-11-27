@@ -19,9 +19,30 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.justamod_item_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.COMPRESSED_PLANKS.get());
+                        pOutput.accept(ModBlocks.DOUBLE_COMPRESSED_WOOD.get());
+                        pOutput.accept(ModBlocks.WOOD_CONGLOMERATE.get());
                         pOutput.accept(ModItems.WOODEN_CORE.get());
 
-                        pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        pOutput.accept(ModItems.WOODEN_SWORD_T2.get());
+                        pOutput.accept(ModItems.WOODEN_AXE_T2.get());
+                        pOutput.accept(ModItems.WOODEN_PICKAXE_T2.get());
+                        pOutput.accept(ModItems.WOODEN_SHOVEL_T2.get());
+                        pOutput.accept(ModItems.WOODEN_HOE_T2.get());
+
+                        pOutput.accept(ModItems.WOODEN_SWORD_T3.get());
+                        pOutput.accept(ModItems.WOODEN_AXE_T3.get());
+                        pOutput.accept(ModItems.WOODEN_PICKAXE_T3.get());
+                        pOutput.accept(ModItems.WOODEN_SHOVEL_T3.get());
+                        pOutput.accept(ModItems.WOODEN_HOE_T3.get());
+
+                        pOutput.accept(ModItems.WOODEN_SWORD_T4.get());
+                        pOutput.accept(ModItems.WOODEN_AXE_T4.get());
+                        pOutput.accept(ModItems.WOODEN_PICKAXE_T4.get());
+                        pOutput.accept(ModItems.WOODEN_SHOVEL_T4.get());
+                        pOutput.accept(ModItems.WOODEN_HOE_T4.get());
                     })
                     .build());
 

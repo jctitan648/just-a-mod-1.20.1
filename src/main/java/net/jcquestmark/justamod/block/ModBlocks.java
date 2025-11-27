@@ -21,6 +21,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> COMPRESSED_PLANKS = registerBlock("compressed_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(3F, 7.5F)));
+    public static final RegistryObject<Block> DOUBLE_COMPRESSED_WOOD = registerBlock("double_compressed_wood",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(6.4F, 14.5F)));
+    public static final RegistryObject<Block> WOOD_CONGLOMERATE = registerBlock("wood_conglomerate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).strength(12F, 30F).sound(SoundType.WOOD)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

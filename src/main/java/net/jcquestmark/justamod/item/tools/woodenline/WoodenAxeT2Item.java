@@ -17,14 +17,14 @@ public class WoodenAxeT2Item extends AxeItem {
         super(new ForgeTier(
                 0,          // Tool level
                 73,         // Durability
-                2.35f,       // Efficiency
-                6.7f,       // Attack Damage
+                2.24f,       // Efficiency
+                6.7f,       // Attack Damage (the real value is this value + 1)
                 9,          // Enchantability
                 Tags.Blocks.NEEDS_WOOD_TOOL,
                 () -> Ingredient.of()  // Repair ingredient
                 ),
                 0,
-                -3.2f,  // Attack Speed (the real value is 4 less than shown here)
+                -3.2f,  // Attack Speed (the real value is this value - 4)
                 new Properties()
         );
     }

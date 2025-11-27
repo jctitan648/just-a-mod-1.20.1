@@ -16,6 +16,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
+        blockWithItem(ModBlocks.COMPRESSED_PLANKS);
+        blockWithItem(ModBlocks.DOUBLE_COMPRESSED_WOOD);
+        blockWithItem(ModBlocks.WOOD_CONGLOMERATE);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

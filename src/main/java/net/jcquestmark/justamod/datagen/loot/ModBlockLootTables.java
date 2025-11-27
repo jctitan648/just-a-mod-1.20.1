@@ -19,6 +19,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
+        this.dropSelf(ModBlocks.COMPRESSED_PLANKS.get());
+        this.dropSelf(ModBlocks.DOUBLE_COMPRESSED_WOOD.get());
+        this.dropSelf(ModBlocks.WOOD_CONGLOMERATE.get());
     }
 
     @Override

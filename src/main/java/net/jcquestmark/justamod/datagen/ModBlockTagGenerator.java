@@ -23,7 +23,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SAPPHIRE_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE)
-                ;
+                .add(ModBlocks.COMPRESSED_PLANKS.get())
+                .add(ModBlocks.DOUBLE_COMPRESSED_WOOD.get())
+                .add(ModBlocks.WOOD_CONGLOMERATE.get());
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 ;
         this.tag(BlockTags.NEEDS_STONE_TOOL)

@@ -3,6 +3,9 @@
 
   "item.justamod.sapphire": "Sapphire",
 
+  "block.justamod.compressed_planks": "Compressed Wooden Planks",
+  "block.justamod.double_compressed_wood": "Double Compressed Wood",
+  "block.justamod.wood_conglomerate": "Wood Conglomerate",
   "item.justamod.wooden_core": "Lignum Core",
 
   "item.justamod.wooden_sword_t2": "Wooden Sword",
@@ -16,6 +19,24 @@
   "item.justamod.wooden_axe_t4": "Wooden Axe",
   "item.justamod.wooden_axe_t5": "Wooden Axe",
   "item.justamod.wooden_axe_t6": "Wooden Axe",
+
+  "item.justamod.wooden_pickaxe_t2": "Wooden Pickaxe",
+  "item.justamod.wooden_pickaxe_t3": "Wooden Pickaxe",
+  "item.justamod.wooden_pickaxe_t4": "Wooden Pickaxe",
+  "item.justamod.wooden_pickaxe_t5": "Wooden Pickaxe",
+  "item.justamod.wooden_pickaxe_t6": "Wooden Pickaxe",
+
+  "item.justamod.wooden_shovel_t2": "Wooden Shovel",
+  "item.justamod.wooden_shovel_t3": "Wooden Shovel",
+  "item.justamod.wooden_shovel_t4": "Wooden Shovel",
+  "item.justamod.wooden_shovel_t5": "Wooden Shovel",
+  "item.justamod.wooden_shovel_t6": "Wooden Shovel",
+
+  "item.justamod.wooden_hoe_t2": "Wooden Hoe",
+  "item.justamod.wooden_hoe_t3": "Wooden Hoe",
+  "item.justamod.wooden_hoe_t4": "Wooden Hoe",
+  "item.justamod.wooden_hoe_t5": "Wooden Hoe",
+  "item.justamod.wooden_hoe_t6": "Wooden Hoe",
 
   "tooltip.justamod.tier1": "§7Tier 1",
   "tooltip.justamod.tier2": "§7Tier 2",

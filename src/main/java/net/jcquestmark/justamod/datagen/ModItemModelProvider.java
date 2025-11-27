@@ -22,6 +22,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WOODEN_CORE);
 
         handheldItem(ModItems.WOODEN_SWORD_T2);
+        handheldItem(ModItems.WOODEN_AXE_T2);
+        handheldItem(ModItems.WOODEN_PICKAXE_T2);
+        handheldItem(ModItems.WOODEN_SHOVEL_T2);
+        handheldItem(ModItems.WOODEN_HOE_T2);
+
+        handheldItem(ModItems.WOODEN_SWORD_T3);
+        handheldItem(ModItems.WOODEN_AXE_T3);
+        handheldItem(ModItems.WOODEN_PICKAXE_T3);
+        handheldItem(ModItems.WOODEN_SHOVEL_T3);
+        handheldItem(ModItems.WOODEN_HOE_T3);
+
+        handheldItem(ModItems.WOODEN_SWORD_T4);
+        handheldItem(ModItems.WOODEN_AXE_T4);
+        handheldItem(ModItems.WOODEN_PICKAXE_T4);
+        handheldItem(ModItems.WOODEN_SHOVEL_T4);
+        handheldItem(ModItems.WOODEN_HOE_T4);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
