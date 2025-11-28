@@ -38,6 +38,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.WOODEN_PICKAXE_T4);
         handheldItem(ModItems.WOODEN_SHOVEL_T4);
         handheldItem(ModItems.WOODEN_HOE_T4);
+
+        handheldItem(ModItems.WOODEN_SWORD_T5);
+        handheldItem(ModItems.WOODEN_AXE_T5);
+        handheldItem(ModItems.WOODEN_PICKAXE_T5);
+        handheldItem(ModItems.WOODEN_SHOVEL_T5);
+        handheldItem(ModItems.WOODEN_HOE_T5);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

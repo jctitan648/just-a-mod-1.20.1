@@ -43,6 +43,12 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.WOODEN_PICKAXE_T4.get());
                         pOutput.accept(ModItems.WOODEN_SHOVEL_T4.get());
                         pOutput.accept(ModItems.WOODEN_HOE_T4.get());
+
+                        pOutput.accept(ModItems.WOODEN_SWORD_T5.get());
+                        pOutput.accept(ModItems.WOODEN_AXE_T5.get());
+                        pOutput.accept(ModItems.WOODEN_PICKAXE_T5.get());
+                        pOutput.accept(ModItems.WOODEN_SHOVEL_T5.get());
+                        pOutput.accept(ModItems.WOODEN_HOE_T5.get());
                     })
                     .build());
 

@@ -36,6 +36,12 @@ public class ModItems {
     public static final RegistryObject<Item> WOODEN_SHOVEL_T4 = ITEMS.register("wooden_shovel_t4", () -> new WoodenShovelT4Item());
     public static final RegistryObject<Item> WOODEN_HOE_T4 = ITEMS.register("wooden_hoe_t4", () -> new WoodenHoeT4Item());
 
+    public static final RegistryObject<Item> WOODEN_SWORD_T5 = ITEMS.register("wooden_sword_t5", () -> new WoodenSwordT5Item());
+    public static final RegistryObject<Item> WOODEN_AXE_T5 = ITEMS.register("wooden_axe_t5", () -> new WoodenAxeT5Item());
+    public static final RegistryObject<Item> WOODEN_PICKAXE_T5 = ITEMS.register("wooden_pickaxe_t5", () -> new WoodenPickaxeT5Item());
+    public static final RegistryObject<Item> WOODEN_SHOVEL_T5 = ITEMS.register("wooden_shovel_t5", () -> new WoodenShovelT5Item());
+    public static final RegistryObject<Item> WOODEN_HOE_T5 = ITEMS.register("wooden_hoe_t5", () -> new WoodenHoeT5Item());
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

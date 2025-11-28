@@ -52,6 +52,10 @@ public class RecipeLines {
             ModItems.WOODEN_HOE_T4.get()
     };
     Item[] WoodT5Set = {
-
+            ModItems.WOODEN_SWORD_T5.get(),
+            ModItems.WOODEN_AXE_T5.get(),
+            ModItems.WOODEN_PICKAXE_T5.get(),
+            ModItems.WOODEN_SHOVEL_T5.get(),
+            ModItems.WOODEN_HOE_T5.get()
     };
 }
