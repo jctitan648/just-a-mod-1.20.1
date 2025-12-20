@@ -1,10 +1,8 @@
 package net.jcquestmark.justamod.datagen.loot;
 
-import net.jcquestmark.justamod.block.ModBlocks;
+import net.jcquestmark.justamod.init.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -22,6 +20,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.COMPRESSED_PLANKS.get());
         this.dropSelf(ModBlocks.DOUBLE_COMPRESSED_WOOD.get());
         this.dropSelf(ModBlocks.WOOD_CONGLOMERATE.get());
+        this.dropSelf(ModBlocks.MACHINE_BASE.get());
+
+        this.dropSelf(ModBlocks.COMPRESSOR_T1_MACHINE.get());
     }
 
     @Override

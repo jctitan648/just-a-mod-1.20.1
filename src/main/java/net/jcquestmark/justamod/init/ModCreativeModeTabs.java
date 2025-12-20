@@ -1,7 +1,6 @@
-package net.jcquestmark.justamod.item;
+package net.jcquestmark.justamod.init;
 
 import net.jcquestmark.justamod.JustAMod;
-import net.jcquestmark.justamod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -49,6 +48,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.WOODEN_PICKAXE_T5.get());
                         pOutput.accept(ModItems.WOODEN_SHOVEL_T5.get());
                         pOutput.accept(ModItems.WOODEN_HOE_T5.get());
+
+                        pOutput.accept(ModBlocks.MACHINE_BASE.get());
+                        pOutput.accept(ModBlocks.COMPRESSOR_T1_MACHINE.get());
                     })
                     .build());
 

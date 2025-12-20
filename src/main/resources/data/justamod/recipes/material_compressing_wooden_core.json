@@ -1,0 +1,25 @@
+{
+  "type": "justamod:material_compressing",
+  "ingredients": [
+    {
+      "item": "justamod:wood_conglomerate",
+      "count": 4
+    },
+    {
+      "item": "justamod:wood_conglomerate",
+      "count": 4
+    },
+    {
+      "item": "justamod:wood_conglomerate",
+      "count": 4
+    },
+    {
+      "item": "justamod:wood_conglomerate",
+      "count": 4
+    }
+  ],
+  "result": {
+    "item": "justamod:wooden_core",
+    "count": 1
+  }
+}

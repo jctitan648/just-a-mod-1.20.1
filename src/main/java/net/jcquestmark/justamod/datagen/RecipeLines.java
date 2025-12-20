@@ -1,6 +1,6 @@
 package net.jcquestmark.justamod.datagen;
 
-import net.jcquestmark.justamod.item.ModItems;
+import net.jcquestmark.justamod.init.ModItems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 

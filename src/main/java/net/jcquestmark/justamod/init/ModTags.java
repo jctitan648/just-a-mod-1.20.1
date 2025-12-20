@@ -1,4 +1,4 @@
-package net.jcquestmark.justamod.util;
+package net.jcquestmark.justamod.init;
 
 import net.jcquestmark.justamod.JustAMod;
 import net.minecraft.resources.ResourceLocation;

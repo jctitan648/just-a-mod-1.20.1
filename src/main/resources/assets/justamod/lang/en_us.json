@@ -38,6 +38,11 @@
   "item.justamod.wooden_hoe_t5": "Wooden Hoe",
   "item.justamod.wooden_hoe_t6": "Wooden Hoe",
 
+  "block.justamod.material_machine_base": "Machine Base",
+  "tooltip.justamod.machine_base": "§7A basic base for all machines",
+
+  "block.justamod.material_compressor": "Material Compressor",
+
   "tooltip.justamod.tier1": "§7Tier 1",
   "tooltip.justamod.tier2": "§7Tier 2",
   "tooltip.justamod.tier3": "§7Tier 3",

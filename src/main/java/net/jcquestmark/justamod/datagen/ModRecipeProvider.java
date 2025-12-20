@@ -1,14 +1,11 @@
 package net.jcquestmark.justamod.datagen;
 
-import net.jcquestmark.justamod.block.ModBlocks;
-import net.jcquestmark.justamod.item.ModItems;
+import net.jcquestmark.justamod.init.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;

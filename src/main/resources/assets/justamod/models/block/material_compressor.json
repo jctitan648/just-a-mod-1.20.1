@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "justamod:block/material_compressor_face",
+    "side": "justamod:block/material_compressor_base",
+    "top": "justamod:block/material_compressor_top"
+  }
+}

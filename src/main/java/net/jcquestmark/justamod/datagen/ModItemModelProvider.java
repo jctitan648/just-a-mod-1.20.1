@@ -1,7 +1,7 @@
 package net.jcquestmark.justamod.datagen;
 
 import net.jcquestmark.justamod.JustAMod;
-import net.jcquestmark.justamod.item.ModItems;
+import net.jcquestmark.justamod.init.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

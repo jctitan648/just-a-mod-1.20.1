@@ -1,4 +1,4 @@
-package net.jcquestmark.justamod.item;
+package net.jcquestmark.justamod.init;
 
 import net.jcquestmark.justamod.JustAMod;
 import net.jcquestmark.justamod.item.tools.woodenline.*;

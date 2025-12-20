@@ -1,11 +1,10 @@
 package net.jcquestmark.justamod;
 
 import com.mojang.logging.LogUtils;
-import net.jcquestmark.justamod.block.ModBlocks;
-import net.jcquestmark.justamod.item.ModCreativeModeTabs;
-import net.jcquestmark.justamod.item.ModItems;
+import net.jcquestmark.justamod.init.*;
+import net.jcquestmark.justamod.screen.CompressorMachineScreen;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -36,6 +35,11 @@ public class JustAMod {
 
         ModBlocks.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -50,10 +54,7 @@ public class JustAMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.SAPPHIRE);
-            event.accept(ModItems.WOODEN_CORE);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -74,6 +75,8 @@ public class JustAMod {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            MenuScreens.register(ModMenuTypes.COMPRESSOR_MACHINE_MENU.get(), CompressorMachineScreen::new);
         }
     }
 }

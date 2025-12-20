@@ -1,7 +1,8 @@
-package net.jcquestmark.justamod.block;
+package net.jcquestmark.justamod.init;
 
 import net.jcquestmark.justamod.JustAMod;
-import net.jcquestmark.justamod.item.ModItems;
+import net.jcquestmark.justamod.block.machines.CompressorT1MachineBlock;
+import net.jcquestmark.justamod.block.materials.MachineBaseBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -15,6 +16,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("Convert2MethodRef")
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, JustAMod.MOD_ID);
@@ -27,6 +29,11 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(6.4F, 14.5F)));
     public static final RegistryObject<Block> WOOD_CONGLOMERATE = registerBlock("wood_conglomerate",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).strength(12F, 30F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MACHINE_BASE = registerBlock("material_machine_base",
+            () -> new MachineBaseBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> COMPRESSOR_T1_MACHINE = registerBlock("material_compressor",
+            () -> new CompressorT1MachineBlock());
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
