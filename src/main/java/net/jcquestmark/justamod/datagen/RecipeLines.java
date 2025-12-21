@@ -1,6 +1,8 @@
 package net.jcquestmark.justamod.datagen;
 
 import net.jcquestmark.justamod.init.ModItems;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
@@ -9,16 +11,26 @@ public class RecipeLines {
         WoodT2Set, WoodT3Set, WoodT4Set, WoodT5Set, WoodT6Set
     }
 
-    public int getSetLength(TierSet tierSet) {
-        switch(tierSet) {
-            case WoodT2Set -> { return WoodT2Set.length; }
-            case WoodT3Set -> { return WoodT3Set.length; }
-            case WoodT4Set -> { return WoodT4Set.length; }
-            case WoodT5Set -> { return WoodT5Set.length; }
-        }
-        return WoodT2Set.length;
 
+
+    public int getTierSetLength(TierSet tierSet) {
+        switch (tierSet) {
+            case WoodT2Set -> {
+                return WoodT2Set.length;
+            }
+            case WoodT3Set -> {
+                return WoodT3Set.length;
+            }
+            case WoodT4Set -> {
+                return WoodT4Set.length;
+            }
+            case WoodT5Set -> {
+                return WoodT5Set.length;
+            }
+            default -> { return 0; }
+        }
     }
+
 
     Item[] WoodT1Set = {
             Items.WOODEN_SWORD,
@@ -51,11 +63,19 @@ public class RecipeLines {
             ModItems.WOODEN_SHOVEL_T4.get(),
             ModItems.WOODEN_HOE_T4.get()
     };
+
     Item[] WoodT5Set = {
             ModItems.WOODEN_SWORD_T5.get(),
             ModItems.WOODEN_AXE_T5.get(),
             ModItems.WOODEN_PICKAXE_T5.get(),
             ModItems.WOODEN_SHOVEL_T5.get(),
             ModItems.WOODEN_HOE_T5.get()
+    };
+    Item[] WoodT6Set = {
+            ModItems.WOODEN_SWORD_T6.get(),
+            ModItems.WOODEN_AXE_T6.get(),
+            ModItems.WOODEN_PICKAXE_T6.get(),
+            ModItems.WOODEN_SHOVEL_T6.get(),
+            ModItems.WOODEN_HOE_T6.get()
     };
 }

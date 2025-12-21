@@ -1,6 +1,6 @@
 package net.jcquestmark.justamod.screen;
 
-import net.jcquestmark.justamod.block.entity.CompressorMachineBlockEntity;
+import net.jcquestmark.justamod.block.entity.InfuserMachineBlockEntity;
 import net.jcquestmark.justamod.init.ModBlocks;
 import net.jcquestmark.justamod.init.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
@@ -12,21 +12,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
 
-public class CompressorMachineMenu extends AbstractContainerMenu {
-    public final CompressorMachineBlockEntity blockEntity;
+public class InfuserMachineMenu extends AbstractContainerMenu {
+    public final InfuserMachineBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
-    public CompressorMachineMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
+    public InfuserMachineMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(4));
     }
 
-    public CompressorMachineMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.COMPRESSOR_MACHINE_MENU.get(), pContainerId);
-        checkContainerSize(inv, 6);
-        blockEntity = ((CompressorMachineBlockEntity) entity);
+    public InfuserMachineMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
+        super(ModMenuTypes.INFUSER_MACHINE_MENU.get(), pContainerId);
+        checkContainerSize(inv, 4);
+        blockEntity = ((InfuserMachineBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
 
@@ -35,17 +34,15 @@ public class CompressorMachineMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
             this.addSlot(new SlotItemHandler(iItemHandler, 0, 8, 61));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 38, 26));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 57, 26));
-            this.addSlot(new SlotItemHandler(iItemHandler, 3, 38, 45));
-            this.addSlot(new SlotItemHandler(iItemHandler, 4, 57, 45));
-            this.addSlot(new SlotItemHandler(iItemHandler, 5, 117, 35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 44, 27));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 116, 27));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 80, 61));
         });
 
         addDataSlots(data);
     }
 
-    public boolean isCompressing() {
+    public boolean isInfusing() {
         return data.get(0) > 0;
     }
 
@@ -60,7 +57,7 @@ public class CompressorMachineMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
-        int progressArrowSize = 24;
+        int progressArrowSize = 25;
 
         return maxProgress != 0 && progress != 0 ?  2 + (progress * progressArrowSize / maxProgress) : 0;
     }
@@ -85,7 +82,7 @@ public class CompressorMachineMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 6;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
@@ -122,7 +119,7 @@ public class CompressorMachineMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.COMPRESSOR_T1_MACHINE.get());
+                pPlayer, ModBlocks.INFUSER_T1_MACHINE.get());
     }
 
     private void addPlayerInventory (Inventory playerInventory) {

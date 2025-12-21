@@ -1,6 +1,8 @@
 package net.jcquestmark.justamod.init;
 
 import net.jcquestmark.justamod.JustAMod;
+import net.jcquestmark.justamod.item.fuels.FuelItem;
+import net.jcquestmark.justamod.item.fuels.RoughPowerCoalItem;
 import net.jcquestmark.justamod.item.tools.woodenline.*;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +19,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOODEN_CORE = ITEMS.register("wooden_core",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ROUGH_POWER_COAL = ITEMS.register("rough_power_coal",
+            () -> new RoughPowerCoalItem(new Item.Properties(), 4000));
 
     public static final RegistryObject<Item> WOODEN_SWORD_T2 = ITEMS.register("wooden_sword_t2", () -> new WoodenSwordT2Item());
     public static final RegistryObject<Item> WOODEN_AXE_T2 = ITEMS.register("wooden_axe_t2", () -> new WoodenAxeT2Item());
@@ -41,6 +46,12 @@ public class ModItems {
     public static final RegistryObject<Item> WOODEN_PICKAXE_T5 = ITEMS.register("wooden_pickaxe_t5", () -> new WoodenPickaxeT5Item());
     public static final RegistryObject<Item> WOODEN_SHOVEL_T5 = ITEMS.register("wooden_shovel_t5", () -> new WoodenShovelT5Item());
     public static final RegistryObject<Item> WOODEN_HOE_T5 = ITEMS.register("wooden_hoe_t5", () -> new WoodenHoeT5Item());
+
+    public static final RegistryObject<Item> WOODEN_SWORD_T6 = ITEMS.register("wooden_sword_t6", () -> new WoodenSwordT6Item());
+    public static final RegistryObject<Item> WOODEN_AXE_T6 = ITEMS.register("wooden_axe_t6", () -> new WoodenAxeT6Item());
+    public static final RegistryObject<Item> WOODEN_PICKAXE_T6 = ITEMS.register("wooden_pickaxe_t6", () -> new WoodenPickaxeT6Item());
+    public static final RegistryObject<Item> WOODEN_SHOVEL_T6 = ITEMS.register("wooden_shovel_t6", () -> new WoodenShovelT6Item());
+    public static final RegistryObject<Item> WOODEN_HOE_T6 = ITEMS.register("wooden_hoe_t6", () -> new WoodenHoeT6Item());
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

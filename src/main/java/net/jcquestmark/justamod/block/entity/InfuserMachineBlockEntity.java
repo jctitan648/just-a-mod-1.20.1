@@ -3,8 +3,8 @@ package net.jcquestmark.justamod.block.entity;
 import net.jcquestmark.justamod.block.machines.CompressorT1MachineBlock;
 import net.jcquestmark.justamod.init.ModBlockEntities;
 import net.jcquestmark.justamod.init.ModTags;
-import net.jcquestmark.justamod.recipe.CompressingRecipe;
-import net.jcquestmark.justamod.screen.CompressorMachineMenu;
+import net.jcquestmark.justamod.recipe.InfusingRecipe;
+import net.jcquestmark.justamod.screen.InfuserMachineMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -31,15 +31,13 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class CompressorMachineBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(6);
+public class InfuserMachineBlockEntity extends BlockEntity implements MenuProvider {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(4);
 
     private static final int FUEL_SLOT = 0;
     private static final int INPUT_SLOT_1 = 1;
     private static final int INPUT_SLOT_2 = 2;
-    private static final int INPUT_SLOT_3 = 3;
-    private static final int INPUT_SLOT_4 = 4;
-    private static final int OUTPUT_SLOT = 5;
+    private static final int OUTPUT_SLOT = 3;
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -51,17 +49,17 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
     private double fuelConsumption = 1.0;
     private int tier = 1;
 
-    public CompressorMachineBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.COMPRESSOR_MACHINE_BE.get(), pPos, pBlockState);
+    public InfuserMachineBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.INFUSER_MACHINE_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> (int)CompressorMachineBlockEntity.this.progress;
-                    case 1 -> (int)CompressorMachineBlockEntity.this.maxProgress;
-                    case 2 -> (int)CompressorMachineBlockEntity.this.fuelAmount;
-                    case 3 -> (int)CompressorMachineBlockEntity.this.fuelCapacity;
-                    case 4 -> CompressorMachineBlockEntity.this.tier;
+                    case 0 -> (int) InfuserMachineBlockEntity.this.progress;
+                    case 1 -> (int) InfuserMachineBlockEntity.this.maxProgress;
+                    case 2 -> (int) InfuserMachineBlockEntity.this.fuelAmount;
+                    case 3 -> (int) InfuserMachineBlockEntity.this.fuelCapacity;
+                    case 4 -> InfuserMachineBlockEntity.this.tier;
                     default -> 0;
                 };
             }
@@ -69,11 +67,11 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pIndex) {
-                    case 0 -> CompressorMachineBlockEntity.this.progress = pValue;
-                    case 1 -> CompressorMachineBlockEntity.this.maxProgress = pValue;
-                    case 2 -> CompressorMachineBlockEntity.this.fuelAmount = pValue;
-                    case 3 -> CompressorMachineBlockEntity.this.fuelCapacity = pValue;
-                    case 4 -> CompressorMachineBlockEntity.this.tier = pValue;
+                    case 0 -> InfuserMachineBlockEntity.this.progress = pValue;
+                    case 1 -> InfuserMachineBlockEntity.this.maxProgress = pValue;
+                    case 2 -> InfuserMachineBlockEntity.this.fuelAmount = pValue;
+                    case 3 -> InfuserMachineBlockEntity.this.fuelCapacity = pValue;
+                    case 4 -> InfuserMachineBlockEntity.this.tier = pValue;
                 }
             }
 
@@ -114,22 +112,22 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.justamod.material_compressor");
+        return Component.translatable("block.justamod.material_infuser");
     }
 
     @Override
     public @Nullable AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new CompressorMachineMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new InfuserMachineMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putDouble("compressor_block.progress", progress);
-        pTag.putDouble("compressor_block.max_progress", maxProgress);
-        pTag.putDouble("compressor_block.fuel_amount", fuelAmount);
-        pTag.putDouble("compressor_block.fuel_consumption", fuelConsumption);
-        pTag.putInt("compressor_block.tier", tier);
+        pTag.putDouble("infuser_block.progress", progress);
+        pTag.putDouble("infuser_block.max_progress", maxProgress);
+        pTag.putDouble("infuser_block.fuel_amount", fuelAmount);
+        pTag.putDouble("infuser_block.fuel_consumption", fuelConsumption);
+        pTag.putInt("infuser_block.tier", tier);
 
         super.saveAdditional(pTag);
     }
@@ -138,17 +136,17 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
     public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        progress = pTag.getDouble("compressor_block.progress");
-        maxProgress = pTag.getDouble("compressor_block.max_progress");
-        fuelAmount = pTag.getDouble("compressor_block.fuel_amount");
-        fuelConsumption = pTag.getDouble("compressor_block.fuel_consumption");
-        tier = pTag.getInt("compressor_block.tier");
+        progress = pTag.getDouble("infuser_block.progress");
+        maxProgress = pTag.getDouble("infuser_block.max_progress");
+        fuelAmount = pTag.getDouble("infuser_block.fuel_amount");
+        fuelConsumption = pTag.getDouble("infuser_block.fuel_consumption");
+        tier = pTag.getInt("infuser_block.tier");
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
         if(hasRecipe()) {
             if(checkFuel()) {
-                increaseCompressingProgress();
+                increaseInfusingProgress();
                 setChanged(pLevel, pPos, pState);
                 setLit(pState, true);
             } else {
@@ -157,7 +155,7 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
             }
 
             if(hasProgressFinished()) {
-                compressItem();
+                infuseItem();
                 resetProgress();
                 setLit(pState, false);
             }
@@ -175,7 +173,7 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
 
     private void setLit(BlockState pState, boolean litState) {
         switch(tier) {
-            case 1 -> pState.setValue(CompressorT1MachineBlock.LIT, true);
+            case 1 -> pState.setValue(CompressorT1MachineBlock.LIT, litState);
         }
     }
 
@@ -192,7 +190,7 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
     }
 
     private boolean hasRecipe() {
-        Optional<CompressingRecipe> recipe = getCurrentRecipe();
+        Optional<InfusingRecipe> recipe = getCurrentRecipe();
 
         if(recipe.isEmpty()) {
             return false;
@@ -203,13 +201,13 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
         return recipe.isPresent() && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }
 
-    private Optional<CompressingRecipe> getCurrentRecipe() {
+    private Optional<InfusingRecipe> getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
         for(int i = 0; i < itemHandler.getSlots(); i++) {
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
 
-        return this.level.getRecipeManager().getRecipeFor(CompressingRecipe.Type.INSTANCE, inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(InfusingRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
@@ -220,20 +218,18 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
     }
 
-    private void compressItem() {
-        Optional<CompressingRecipe> recipe = getCurrentRecipe();
+    private void infuseItem() {
+        Optional<InfusingRecipe> recipe = getCurrentRecipe();
         ItemStack result = recipe.get().getResultItem(null);
 
         this.itemHandler.extractItem(INPUT_SLOT_1, recipe.get().getIngredientAmount(0), false);
         this.itemHandler.extractItem(INPUT_SLOT_2, recipe.get().getIngredientAmount(1), false);
-        this.itemHandler.extractItem(INPUT_SLOT_3, recipe.get().getIngredientAmount(2), false);
-        this.itemHandler.extractItem(INPUT_SLOT_4, recipe.get().getIngredientAmount(3), false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
-    private void increaseCompressingProgress() {
+    private void increaseInfusingProgress() {
         progress += 1.0 * Math.max((tier^2) / 2, 1);
         fuelAmount -= Math.min(fuelAmount, fuelConsumption);
     }

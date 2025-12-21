@@ -2,6 +2,7 @@ package net.jcquestmark.justamod.init;
 
 import net.jcquestmark.justamod.JustAMod;
 import net.jcquestmark.justamod.block.machines.CompressorT1MachineBlock;
+import net.jcquestmark.justamod.block.machines.InfuserT1MachineBlock;
 import net.jcquestmark.justamod.block.materials.MachineBaseBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -34,6 +35,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COMPRESSOR_T1_MACHINE = registerBlock("material_compressor",
             () -> new CompressorT1MachineBlock());
+    public static final RegistryObject<Block> INFUSER_T1_MACHINE = registerBlock("material_infuser",
+            () -> new InfuserT1MachineBlock());
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

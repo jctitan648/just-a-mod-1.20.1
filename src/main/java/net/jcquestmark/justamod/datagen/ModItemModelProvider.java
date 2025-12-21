@@ -21,6 +21,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.WOODEN_CORE);
 
+        simpleItem(ModItems.ROUGH_POWER_COAL);
+
         handheldItem(ModItems.WOODEN_SWORD_T2);
         handheldItem(ModItems.WOODEN_AXE_T2);
         handheldItem(ModItems.WOODEN_PICKAXE_T2);
@@ -44,6 +46,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.WOODEN_PICKAXE_T5);
         handheldItem(ModItems.WOODEN_SHOVEL_T5);
         handheldItem(ModItems.WOODEN_HOE_T5);
+
+        handheldItem(ModItems.WOODEN_SWORD_T6);
+        handheldItem(ModItems.WOODEN_AXE_T6);
+        handheldItem(ModItems.WOODEN_PICKAXE_T6);
+        handheldItem(ModItems.WOODEN_SHOVEL_T6);
+        handheldItem(ModItems.WOODEN_HOE_T6);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

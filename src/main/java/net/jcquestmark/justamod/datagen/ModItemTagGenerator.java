@@ -1,6 +1,8 @@
 package net.jcquestmark.justamod.datagen;
 
 import net.jcquestmark.justamod.JustAMod;
+import net.jcquestmark.justamod.init.ModItems;
+import net.jcquestmark.justamod.init.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -17,6 +19,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-
+        this.tag(ModTags.Items.FUEL_800)
+                .add(ModItems.ROUGH_POWER_COAL.get())
+                ;
     }
 }

@@ -20,6 +20,8 @@ public class ModTags {
 
     public static class Items {
 
+        public static final TagKey<Item> FUEL_800 = tag("machine_fuel_800");
+
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(JustAMod.MOD_ID, name));
         }

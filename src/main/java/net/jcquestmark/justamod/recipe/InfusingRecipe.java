@@ -14,18 +14,16 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-import static net.minecraftforge.common.crafting.CraftingHelper.getIngredient;
-
-public class CompressingRecipe implements Recipe<SimpleContainer> {
+public class InfusingRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
-    private final int compressingTime;
+    private final int infusingTime;
     private final ResourceLocation id;
 
-    public CompressingRecipe(NonNullList<Ingredient> inputItems, ItemStack output, int compressingTime, ResourceLocation id) {
+    public InfusingRecipe(NonNullList<Ingredient> inputItems, ItemStack output, int infusingTime, ResourceLocation id) {
         this.inputItems = inputItems;
         this.output = output;
-        this.compressingTime = compressingTime;
+        this.infusingTime = infusingTime;
         this.id = id;
     }
 
@@ -38,13 +36,9 @@ public class CompressingRecipe implements Recipe<SimpleContainer> {
         boolean input_1 = inputItems.get(0).test(pContainer.getItem(1)) &&
                 pContainer.getItem(1).getCount() >= getIngredientAmount(0);
         boolean input_2 = inputItems.get(1).test(pContainer.getItem(2)) &&
-                pContainer.getItem(2).getCount() >= getIngredientAmount(1);;
-        boolean input_3 = inputItems.get(2).test(pContainer.getItem(3)) &&
-                pContainer.getItem(3).getCount() >= getIngredientAmount(2);;
-        boolean input_4 = inputItems.get(3).test(pContainer.getItem(4)) &&
-                pContainer.getItem(4).getCount() >= getIngredientAmount(3);;
+                pContainer.getItem(2).getCount() >= getIngredientAmount(1);
 
-        return input_1 && input_2 && input_3 && input_4;
+        return input_1 && input_2;
     }
 
     public int getIngredientAmount(int index) {
@@ -56,7 +50,7 @@ public class CompressingRecipe implements Recipe<SimpleContainer> {
     }
 
     public int getMaxProgress() {
-        return this.compressingTime;
+        return this.infusingTime;
     }
 
     @Override
@@ -89,20 +83,20 @@ public class CompressingRecipe implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<CompressingRecipe> {
+    public static class Type implements RecipeType<InfusingRecipe> {
         public static final Type INSTANCE = new Type();
-        public static final String ID = "material_compressing";
+        public static final String ID = "material_infusing";
     }
 
-    public static class Serializer implements RecipeSerializer<CompressingRecipe> {
+    public static class Serializer implements RecipeSerializer<InfusingRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(JustAMod.MOD_ID, "material_compressing");
+        public static final ResourceLocation ID = new ResourceLocation(JustAMod.MOD_ID, "material_infusing");
 
 
         @Override
-        public CompressingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
+        public InfusingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
             JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(4, Ingredient.EMPTY);
+            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
 
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
 
@@ -111,9 +105,9 @@ public class CompressingRecipe implements Recipe<SimpleContainer> {
                 inputs.set(i, ingredient);
             }
 
-            int compressingTime = GsonHelper.getAsInt(pSerializedRecipe, "compressing_time", 400);
+            int infusingTime = GsonHelper.getAsInt(pSerializedRecipe, "infusing_time", 600);
 
-            return new CompressingRecipe(inputs, output, compressingTime, pRecipeId);
+            return new InfusingRecipe(inputs, output, infusingTime, pRecipeId);
         }
 
         private Ingredient getIngredient(JsonObject jsonObject) {
@@ -131,20 +125,20 @@ public class CompressingRecipe implements Recipe<SimpleContainer> {
         }
 
         @Override
-        public @Nullable CompressingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+        public @Nullable InfusingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
             NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
 
             for(int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromNetwork(pBuffer));
             }
 
-            int compressingTime = pBuffer.readInt();
+            int infusingTime = pBuffer.readInt();
             ItemStack output = pBuffer.readItem();
-            return new CompressingRecipe(inputs, output, compressingTime, pRecipeId);
+            return new InfusingRecipe(inputs, output, infusingTime, pRecipeId);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, CompressingRecipe pRecipe) {
+        public void toNetwork(FriendlyByteBuf pBuffer, InfusingRecipe pRecipe) {
             pBuffer.writeInt(pRecipe.inputItems.size());
 
             for (Ingredient ingredient : pRecipe.getIngredients()) {

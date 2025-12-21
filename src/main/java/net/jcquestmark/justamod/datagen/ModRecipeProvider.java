@@ -4,6 +4,7 @@ import net.jcquestmark.justamod.init.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -39,7 +40,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.WOOD_CONGLOMERATE.get(), 1.5f, 400)
                 .unlockedBy(getHasName(ModBlocks.DOUBLE_COMPRESSED_WOOD.get()), has(ModBlocks.DOUBLE_COMPRESSED_WOOD.get()))
                 .save(pWriter);     // Wood Conglomerate (Blasting)
-        for (int i = 0; i < recipeLines.getSetLength(RecipeLines.TierSet.WoodT2Set); i++) {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MACHINE_BASE.get())
+                .pattern("010")
+                .pattern("121")
+                .pattern("010")
+                .define('0',Blocks.STONE_BRICKS).define('1', Items.IRON_INGOT).define('2',Blocks.IRON_BLOCK)
+                .unlockedBy(getHasName(Blocks.IRON_BLOCK), has(Blocks.IRON_BLOCK))
+                .save(pWriter);     // Machine Base
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COMPRESSOR_T1_MACHINE.get())
+                .pattern("010")
+                .pattern("0B0")
+                .pattern("020")
+                .define('0',Items.REDSTONE).define('1', Blocks.ANVIL).define('2', Blocks.IRON_BLOCK)
+                .define('B',ModBlocks.MACHINE_BASE.get())
+                .unlockedBy(getHasName(ModBlocks.MACHINE_BASE.get()), has(ModBlocks.MACHINE_BASE.get()))
+                .save(pWriter);     // Material Compressor (Tier 1)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INFUSER_T1_MACHINE.get())
+                .pattern("000")
+                .pattern("1B1")
+                .pattern("020")
+                .define('0',Items.REDSTONE).define('1', Blocks.IRON_BLOCK).define('2', Blocks.MAGMA_BLOCK)
+                .define('B',ModBlocks.MACHINE_BASE.get())
+                .unlockedBy(getHasName(ModBlocks.MACHINE_BASE.get()), has(ModBlocks.MACHINE_BASE.get()))
+                .save(pWriter);     // Material Infuser (Tier 1)
+
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.WoodT2Set); i++) {
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.WoodT2Set[i])
                     .pattern("010")
                     .pattern("1T1")
@@ -49,7 +77,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(recipeLines.WoodT1Set[i]), has(recipeLines.WoodT1Set[i]))
                     .save(pWriter);
         }   // Wood Tools Lv1 -> Lv2
-        for (int i = 0; i < recipeLines.getSetLength(RecipeLines.TierSet.WoodT3Set); i++) {
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.WoodT3Set); i++) {
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.WoodT3Set[i])
                     .pattern("010")
                     .pattern("1T1")
@@ -59,7 +87,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(recipeLines.WoodT2Set[i]), has(recipeLines.WoodT2Set[i]))
                     .save(pWriter);
         }   // Wood Tools Lv2 -> Lv3
-        for (int i = 0; i < recipeLines.getSetLength(RecipeLines.TierSet.WoodT4Set); i++) {
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.WoodT4Set); i++) {
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.WoodT4Set[i])
                     .pattern("000")
                     .pattern("1T1")
@@ -69,7 +97,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(recipeLines.WoodT3Set[i]), has(recipeLines.WoodT3Set[i]))
                     .save(pWriter);
         }   // Wood Tools Lv3 -> Lv4
-        for (int i = 0; i < recipeLines.getSetLength(RecipeLines.TierSet.WoodT5Set); i++) {
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.WoodT5Set); i++) {
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.WoodT5Set[i])
                     .pattern(" 0 ")
                     .pattern("0T0")

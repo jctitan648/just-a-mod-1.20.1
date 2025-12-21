@@ -3,6 +3,7 @@ package net.jcquestmark.justamod;
 import com.mojang.logging.LogUtils;
 import net.jcquestmark.justamod.init.*;
 import net.jcquestmark.justamod.screen.CompressorMachineScreen;
+import net.jcquestmark.justamod.screen.InfuserMachineScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
@@ -77,6 +78,7 @@ public class JustAMod {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
             MenuScreens.register(ModMenuTypes.COMPRESSOR_MACHINE_MENU.get(), CompressorMachineScreen::new);
+            MenuScreens.register(ModMenuTypes.INFUSER_MACHINE_MENU.get(), InfuserMachineScreen::new);
         }
     }
 }

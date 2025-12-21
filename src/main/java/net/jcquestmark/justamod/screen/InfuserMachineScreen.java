@@ -1,3 +1,4 @@
+
 package net.jcquestmark.justamod.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -9,11 +10,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class CompressorMachineScreen extends AbstractContainerScreen<CompressorMachineMenu> {
+public class InfuserMachineScreen extends AbstractContainerScreen<InfuserMachineMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(JustAMod.MOD_ID, "textures/gui/material_compressor_gui.png");
+            new ResourceLocation(JustAMod.MOD_ID, "textures/gui/material_infuser_gui.png");
 
-    public CompressorMachineScreen(CompressorMachineMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
+    public InfuserMachineScreen(InfuserMachineMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }
 
@@ -38,8 +39,8 @@ public class CompressorMachineScreen extends AbstractContainerScreen<CompressorM
     }
 
     private void renderProgressArrow (GuiGraphics guiGraphics, int x, int y) {
-        if (menu.isCompressing()) {
-            guiGraphics.blit(TEXTURE, x + 82, y + 36, 176, 0, menu.getScaledProgress(), 16);
+        if (menu.isInfusing()) {
+            guiGraphics.blit(TEXTURE, x + 65, y + 31, 176, 0, 46, menu.getScaledProgress());
         }
     }
 

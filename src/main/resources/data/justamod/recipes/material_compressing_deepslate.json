@@ -1,0 +1,26 @@
+{
+  "type": "justamod:material_compressing",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone",
+      "count": 8
+    },
+    {
+      "item": "minecraft:cobblestone",
+      "count": 8
+    },
+    {
+      "item": "minecraft:cobblestone",
+      "count": 8
+    },
+    {
+      "item": "minecraft:cobblestone",
+      "count": 8
+    }
+  ],
+  "compressing_time": 200,
+  "result": {
+    "item": "minecraft:cobbled_deepslate",
+    "count": 1
+  }
+}

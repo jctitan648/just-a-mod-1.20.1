@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.WOOD_CONGLOMERATE.get());
                         pOutput.accept(ModItems.WOODEN_CORE.get());
 
+                        pOutput.accept(ModItems.ROUGH_POWER_COAL.get());
+
                         pOutput.accept(ModItems.WOODEN_SWORD_T2.get());
                         pOutput.accept(ModItems.WOODEN_AXE_T2.get());
                         pOutput.accept(ModItems.WOODEN_PICKAXE_T2.get());

@@ -8,6 +8,8 @@
   "block.justamod.wood_conglomerate": "Wood Conglomerate",
   "item.justamod.wooden_core": "Lignum Core",
 
+  "item.justamod.rough_power_coal": "Rough Power Coal",
+
   "item.justamod.wooden_sword_t2": "Wooden Sword",
   "item.justamod.wooden_sword_t3": "Wooden Sword",
   "item.justamod.wooden_sword_t4": "Wooden Sword",
@@ -42,6 +44,7 @@
   "tooltip.justamod.machine_base": "§7A basic base for all machines",
 
   "block.justamod.material_compressor": "Material Compressor",
+  "block.justamod.material_infuser": "Material Infuser",
 
   "tooltip.justamod.tier1": "§7Tier 1",
   "tooltip.justamod.tier2": "§7Tier 2",
@@ -56,6 +59,8 @@
 
   "tooltip.justamod.lv1": "§7Level 1",
   "tooltip.justamod.lv2": "§7Level 2",
+
+  "tooltip.justamod.fuel_800": "§7Machine Fuel: 800",
 
   "block.justamod.sapphire_block": "Block of Sapphire"
 }

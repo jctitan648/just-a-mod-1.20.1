@@ -23,6 +23,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.MACHINE_BASE.get());
 
         this.dropSelf(ModBlocks.COMPRESSOR_T1_MACHINE.get());
+        this.dropSelf(ModBlocks.INFUSER_T1_MACHINE.get());
     }
 
     @Override

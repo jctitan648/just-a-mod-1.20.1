@@ -1,6 +1,6 @@
 package net.jcquestmark.justamod.block.machines;
 
-import net.jcquestmark.justamod.block.entity.CompressorMachineBlockEntity;
+import net.jcquestmark.justamod.block.entity.InfuserMachineBlockEntity;
 import net.jcquestmark.justamod.init.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -26,12 +25,12 @@ import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 
-public class CompressorT1MachineBlock extends BaseEntityBlock {
+public class InfuserT1MachineBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty LIT = BooleanProperty.create("lit");
 
-    public CompressorT1MachineBlock() {
-        super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(4f, 10f)
+    public InfuserT1MachineBlock() {
+        super(Properties.of().sound(SoundType.METAL).strength(4f, 10f)
                 .requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK));
         this.registerDefaultState(this.getStateDefinition().any()
                 .setValue(FACING, Direction.NORTH)
@@ -65,8 +64,8 @@ public class CompressorT1MachineBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         if(pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof CompressorMachineBlockEntity) {
-                ((CompressorMachineBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof InfuserMachineBlockEntity) {
+                ((InfuserMachineBlockEntity) blockEntity).drops();
             }
         }
 
@@ -77,9 +76,9 @@ public class CompressorT1MachineBlock extends BaseEntityBlock {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof CompressorMachineBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (CompressorMachineBlockEntity)entity, pPos);
-                ((CompressorMachineBlockEntity) entity).setTier(1);
+            if(entity instanceof InfuserMachineBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (InfuserMachineBlockEntity)entity, pPos);
+                ((InfuserMachineBlockEntity) entity).setTier(1);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -92,7 +91,7 @@ public class CompressorT1MachineBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new CompressorMachineBlockEntity(pPos, pState);
+        return new InfuserMachineBlockEntity(pPos, pState);
     }
 
     @Override
@@ -101,7 +100,7 @@ public class CompressorT1MachineBlock extends BaseEntityBlock {
             return null;
         }
 
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.COMPRESSOR_MACHINE_BE.get(),
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.INFUSER_MACHINE_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) ->
                         pBlockEntity.tick(pLevel1, pPos, pState1));
     }
