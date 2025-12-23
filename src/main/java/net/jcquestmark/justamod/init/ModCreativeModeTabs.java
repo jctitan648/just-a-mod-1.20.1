@@ -51,8 +51,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.WOODEN_SHOVEL_T5.get());
                         pOutput.accept(ModItems.WOODEN_HOE_T5.get());
 
+                        pOutput.accept(ModItems.WOODEN_SWORD_T6.get());
+                        pOutput.accept(ModItems.WOODEN_AXE_T6.get());
+                        pOutput.accept(ModItems.WOODEN_PICKAXE_T6.get());
+                        pOutput.accept(ModItems.WOODEN_SHOVEL_T6.get());
+                        pOutput.accept(ModItems.WOODEN_HOE_T6.get());
+
                         pOutput.accept(ModBlocks.MACHINE_BASE.get());
                         pOutput.accept(ModBlocks.COMPRESSOR_T1_MACHINE.get());
+                        pOutput.accept(ModBlocks.INFUSER_T1_MACHINE.get());
                     })
                     .build());
 

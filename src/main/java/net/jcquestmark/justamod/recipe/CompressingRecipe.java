@@ -14,8 +14,6 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-import static net.minecraftforge.common.crafting.CraftingHelper.getIngredient;
-
 public class CompressingRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
@@ -38,11 +36,11 @@ public class CompressingRecipe implements Recipe<SimpleContainer> {
         boolean input_1 = inputItems.get(0).test(pContainer.getItem(1)) &&
                 pContainer.getItem(1).getCount() >= getIngredientAmount(0);
         boolean input_2 = inputItems.get(1).test(pContainer.getItem(2)) &&
-                pContainer.getItem(2).getCount() >= getIngredientAmount(1);;
+                pContainer.getItem(2).getCount() >= getIngredientAmount(1);
         boolean input_3 = inputItems.get(2).test(pContainer.getItem(3)) &&
-                pContainer.getItem(3).getCount() >= getIngredientAmount(2);;
+                pContainer.getItem(3).getCount() >= getIngredientAmount(2);
         boolean input_4 = inputItems.get(3).test(pContainer.getItem(4)) &&
-                pContainer.getItem(4).getCount() >= getIngredientAmount(3);;
+                pContainer.getItem(4).getCount() >= getIngredientAmount(3);
 
         return input_1 && input_2 && input_3 && input_4;
     }
@@ -53,6 +51,11 @@ public class CompressingRecipe implements Recipe<SimpleContainer> {
             return stack.getCount();
         }
         return 0;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return inputItems;
     }
 
     public int getMaxProgress() {

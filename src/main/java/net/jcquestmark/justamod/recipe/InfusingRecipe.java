@@ -49,6 +49,11 @@ public class InfusingRecipe implements Recipe<SimpleContainer> {
         return 0;
     }
 
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return inputItems;
+    }
+
     public int getMaxProgress() {
         return this.infusingTime;
     }
