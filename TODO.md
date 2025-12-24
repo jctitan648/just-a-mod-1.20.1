@@ -1,5 +1,7 @@
 # TODO list
 
-- Add the Wooden Tool line (All Wood Tools T2-T6 + Materials)
-- Block entities and things
-- Machinery/RF integration
+- Machine Duplicator
+- FE integration
+- Making the damage library and make that a dependency
+- Iron Tool Line
+- Bronze?
