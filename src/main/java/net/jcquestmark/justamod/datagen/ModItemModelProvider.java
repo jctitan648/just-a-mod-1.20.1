@@ -20,39 +20,30 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.WOODEN_CORE);
+        simpleItem(ModItems.CHIPPED_STONE_CORE);
+        simpleItem(ModItems.GILDED_STONE_CORE);
 
         simpleItem(ModItems.ROUGH_POWER_COAL);
 
-        handheldItem(ModItems.WOODEN_SWORD_T2);
-        handheldItem(ModItems.WOODEN_AXE_T2);
-        handheldItem(ModItems.WOODEN_PICKAXE_T2);
-        handheldItem(ModItems.WOODEN_SHOVEL_T2);
-        handheldItem(ModItems.WOODEN_HOE_T2);
-
-        handheldItem(ModItems.WOODEN_SWORD_T3);
-        handheldItem(ModItems.WOODEN_AXE_T3);
-        handheldItem(ModItems.WOODEN_PICKAXE_T3);
-        handheldItem(ModItems.WOODEN_SHOVEL_T3);
-        handheldItem(ModItems.WOODEN_HOE_T3);
-
-        handheldItem(ModItems.WOODEN_SWORD_T4);
-        handheldItem(ModItems.WOODEN_AXE_T4);
-        handheldItem(ModItems.WOODEN_PICKAXE_T4);
-        handheldItem(ModItems.WOODEN_SHOVEL_T4);
-        handheldItem(ModItems.WOODEN_HOE_T4);
-
-        handheldItem(ModItems.WOODEN_SWORD_T5);
-        handheldItem(ModItems.WOODEN_AXE_T5);
-        handheldItem(ModItems.WOODEN_PICKAXE_T5);
-        handheldItem(ModItems.WOODEN_SHOVEL_T5);
-        handheldItem(ModItems.WOODEN_HOE_T5);
-
-        handheldItem(ModItems.WOODEN_SWORD_T6);
-        handheldItem(ModItems.WOODEN_AXE_T6);
-        handheldItem(ModItems.WOODEN_PICKAXE_T6);
-        handheldItem(ModItems.WOODEN_SHOVEL_T6);
-        handheldItem(ModItems.WOODEN_HOE_T6);
+        for (RegistryObject<Item> item : toolItemArray) {
+            handheldItem(item);
+        }
     }
+
+    @SuppressWarnings("unchecked")
+    RegistryObject<Item>[] toolItemArray = new RegistryObject[]{
+            ModItems.WOODEN_SWORD_T2, ModItems.WOODEN_AXE_T2, ModItems.WOODEN_PICKAXE_T2, ModItems.WOODEN_SHOVEL_T2, ModItems.WOODEN_HOE_T2,
+            ModItems.WOODEN_SWORD_T3, ModItems.WOODEN_AXE_T3, ModItems.WOODEN_PICKAXE_T3, ModItems.WOODEN_SHOVEL_T3, ModItems.WOODEN_HOE_T3,
+            ModItems.WOODEN_SWORD_T4, ModItems.WOODEN_AXE_T4, ModItems.WOODEN_PICKAXE_T4, ModItems.WOODEN_SHOVEL_T4, ModItems.WOODEN_HOE_T4,
+            ModItems.WOODEN_SWORD_T5, ModItems.WOODEN_AXE_T5, ModItems.WOODEN_PICKAXE_T5, ModItems.WOODEN_SHOVEL_T5, ModItems.WOODEN_HOE_T5,
+            ModItems.WOODEN_SWORD_T6, ModItems.WOODEN_AXE_T6, ModItems.WOODEN_PICKAXE_T6, ModItems.WOODEN_SHOVEL_T6, ModItems.WOODEN_HOE_T6,
+
+            ModItems.STONE_SWORD_T2, ModItems.STONE_AXE_T2, ModItems.STONE_PICKAXE_T2, ModItems.STONE_SHOVEL_T2, ModItems.STONE_HOE_T2,
+            ModItems.STONE_SWORD_T3, ModItems.STONE_AXE_T3, ModItems.STONE_PICKAXE_T3, ModItems.STONE_SHOVEL_T3, ModItems.STONE_HOE_T3,
+            ModItems.STONE_SWORD_T4, ModItems.STONE_AXE_T4, ModItems.STONE_PICKAXE_T4, ModItems.STONE_SHOVEL_T4, ModItems.STONE_HOE_T4,
+            ModItems.STONE_SWORD_T5, ModItems.STONE_AXE_T5, ModItems.STONE_PICKAXE_T5, ModItems.STONE_SHOVEL_T5, ModItems.STONE_HOE_T5,
+            ModItems.STONE_SWORD_T6, ModItems.STONE_AXE_T6, ModItems.STONE_PICKAXE_T6, ModItems.STONE_SHOVEL_T6, ModItems.STONE_HOE_T6,
+    };
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

@@ -40,7 +40,7 @@ public class InfusingCategory implements IRecipeCategory<InfusingRecipe> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("block.justamod.material_compressor");
+        return Component.translatable("block.justamod.material_infuser");
     }
 
     @Override

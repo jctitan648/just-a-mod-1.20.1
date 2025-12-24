@@ -1,0 +1,26 @@
+{
+  "type": "justamod:material_compressing",
+  "ingredients": [
+    {
+      "item": "justamod:compressed_stone",
+      "count": 6
+    },
+    {
+      "item": "justamod:compressed_stone",
+      "count": 6
+    },
+    {
+      "item": "justamod:compressed_stone",
+      "count": 6
+    },
+    {
+      "item": "justamod:compressed_stone",
+      "count": 6
+    }
+  ],
+  "compressing_time": 400,
+  "result": {
+    "item": "justamod:stone_core_block",
+    "count": 1
+  }
+}

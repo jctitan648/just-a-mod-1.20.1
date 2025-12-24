@@ -1,0 +1,16 @@
+{
+  "type": "justamod:material_infusing",
+  "ingredients": [
+    {
+      "item": "justamod:wooden_shovel_t5"
+    },
+    {
+      "item": "justamod:wooden_core"
+    }
+  ],
+  "infusing_time": 600,
+  "result": {
+    "item": "justamod:wooden_shovel_t6",
+    "count": 1
+  }
+}

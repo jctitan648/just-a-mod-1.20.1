@@ -1,5 +1,6 @@
 {
-  "creativetab.justamod_item_tab": "Just Some Items",
+  "creativetab.justamod_item_tab": "Just Some Items n' Blocks",
+  "creativetab.justamod_tool_tab": "Just Some Tools n' Weapons",
 
   "item.justamod.sapphire": "Sapphire",
 
@@ -7,6 +8,12 @@
   "block.justamod.double_compressed_wood": "Double Compressed Wood",
   "block.justamod.wood_conglomerate": "Wood Conglomerate",
   "item.justamod.wooden_core": "Lignum Core",
+
+  "block.justamod.cobbled_stone_bricks": "Cobbled Stone Bricks",
+  "block.justamod.compressed_stone": "Compressed Stone",
+  "block.justamod.stone_core_block": "Stone Core Block",
+  "item.justamod.chipped_stone_core": "Chipped Stone Core",
+  "item.justamod.gilded_stone_core": "Lapis Aureus Core",
 
   "item.justamod.rough_power_coal": "Rough Power Coal",
 
@@ -39,6 +46,36 @@
   "item.justamod.wooden_hoe_t4": "Wooden Hoe",
   "item.justamod.wooden_hoe_t5": "Wooden Hoe",
   "item.justamod.wooden_hoe_t6": "Wooden Hoe",
+
+  "item.justamod.stone_sword_t2": "Stone Sword",
+  "item.justamod.stone_sword_t3": "Stone Sword",
+  "item.justamod.stone_sword_t4": "Stone Sword",
+  "item.justamod.stone_sword_t5": "Stone Sword",
+  "item.justamod.stone_sword_t6": "Stone Sword",
+
+  "item.justamod.stone_axe_t2": "Stone Axe",
+  "item.justamod.stone_axe_t3": "Stone Axe",
+  "item.justamod.stone_axe_t4": "Stone Axe",
+  "item.justamod.stone_axe_t5": "Stone Axe",
+  "item.justamod.stone_axe_t6": "Stone Axe",
+
+  "item.justamod.stone_pickaxe_t2": "Stone Pickaxe",
+  "item.justamod.stone_pickaxe_t3": "Stone Pickaxe",
+  "item.justamod.stone_pickaxe_t4": "Stone Pickaxe",
+  "item.justamod.stone_pickaxe_t5": "Stone Pickaxe",
+  "item.justamod.stone_pickaxe_t6": "Stone Pickaxe",
+
+  "item.justamod.stone_shovel_t2": "Stone Shovel",
+  "item.justamod.stone_shovel_t3": "Stone Shovel",
+  "item.justamod.stone_shovel_t4": "Stone Shovel",
+  "item.justamod.stone_shovel_t5": "Stone Shovel",
+  "item.justamod.stone_shovel_t6": "Stone Shovel",
+
+  "item.justamod.stone_hoe_t2": "Stone Hoe",
+  "item.justamod.stone_hoe_t3": "Stone Hoe",
+  "item.justamod.stone_hoe_t4": "Stone Hoe",
+  "item.justamod.stone_hoe_t5": "Stone Hoe",
+  "item.justamod.stone_hoe_t6": "Stone Hoe",
 
   "block.justamod.material_machine_base": "Machine Base",
   "tooltip.justamod.machine_base": "§7A basic base for all machines",

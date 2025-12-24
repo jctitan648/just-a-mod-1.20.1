@@ -1,0 +1,16 @@
+{
+  "type": "justamod:material_infusing",
+  "ingredients": [
+    {
+      "item": "justamod:stone_shovel_t5"
+    },
+    {
+      "item": "justamod:gilded_stone_core"
+    }
+  ],
+  "infusing_time": 800,
+  "result": {
+    "item": "justamod:stone_shovel_t6",
+    "count": 1
+  }
+}

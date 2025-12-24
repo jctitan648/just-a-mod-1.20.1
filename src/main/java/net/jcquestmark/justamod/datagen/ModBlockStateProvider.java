@@ -20,6 +20,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COMPRESSED_PLANKS);
         blockWithItem(ModBlocks.DOUBLE_COMPRESSED_WOOD);
         blockWithItem(ModBlocks.WOOD_CONGLOMERATE);
+        blockWithItem(ModBlocks.COBBLED_STONE_BRICKS);
+        blockWithItem(ModBlocks.COMPRESSED_STONE);
+        blockWithItem(ModBlocks.STONE_CORE_BLOCK);
+
         blockWithItem(ModBlocks.MACHINE_BASE);
 
     }

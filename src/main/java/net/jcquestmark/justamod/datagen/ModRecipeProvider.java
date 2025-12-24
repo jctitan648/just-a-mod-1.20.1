@@ -1,6 +1,7 @@
 package net.jcquestmark.justamod.datagen;
 
 import net.jcquestmark.justamod.init.ModBlocks;
+import net.jcquestmark.justamod.init.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
@@ -40,6 +41,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.WOOD_CONGLOMERATE.get(), 1.5f, 400)
                 .unlockedBy(getHasName(ModBlocks.DOUBLE_COMPRESSED_WOOD.get()), has(ModBlocks.DOUBLE_COMPRESSED_WOOD.get()))
                 .save(pWriter);     // Wood Conglomerate (Blasting)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COBBLED_STONE_BRICKS.get())
+                .pattern("010")
+                .pattern("101")
+                .pattern("010")
+                .define('0',ItemTags.STONE_TOOL_MATERIALS).define('1',ItemTags.STONE_BRICKS)
+                .unlockedBy(getHasName(Blocks.STONE_BRICKS), has(Blocks.STONE_BRICKS))
+                .save(pWriter);     // Cobbled Stone Bricks
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.COMPRESSED_STONE.get())
+                .pattern("000")
+                .pattern("000")
+                .pattern("000")
+                .define('0',ModBlocks.COBBLED_STONE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.COBBLED_STONE_BRICKS.get()), has(ModBlocks.COBBLED_STONE_BRICKS.get()))
+                .save(pWriter);     // Compressed Stone
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ROUGH_POWER_COAL.get())
+                .pattern("101")
+                .pattern("010")
+                .pattern("101")
+                .define('0',Items.COAL).define('1',Items.REDSTONE)
+                .unlockedBy(getHasName(ModBlocks.MACHINE_BASE.get()), has(ModBlocks.MACHINE_BASE.get()))
+                .save(pWriter);     // Rough Power Coal
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MACHINE_BASE.get())
                 .pattern("010")
@@ -107,5 +131,46 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(recipeLines.WoodT4Set[i]), has(recipeLines.WoodT4Set[i]))
                     .save(pWriter);
         }   // Wood Tools Lv4 -> Lv5
+
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.StoneT2Set); i++) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.StoneT2Set[i])
+                    .pattern("000")
+                    .pattern("0T0")
+                    .pattern("000")
+                    .define('0', ItemTags.STONE_TOOL_MATERIALS)
+                    .define('T', recipeLines.StoneT1Set[i])
+                    .unlockedBy(getHasName(recipeLines.StoneT1Set[i]), has(recipeLines.StoneT1Set[i]))
+                    .save(pWriter);
+        }   // Stone Tools Lv1 -> Lv2
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.StoneT3Set); i++) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.StoneT3Set[i])
+                    .pattern("000")
+                    .pattern("0T0")
+                    .pattern("000")
+                    .define('0', ModBlocks.COBBLED_STONE_BRICKS.get())
+                    .define('T', recipeLines.StoneT2Set[i])
+                    .unlockedBy(getHasName(recipeLines.StoneT2Set[i]), has(recipeLines.StoneT2Set[i]))
+                    .save(pWriter);
+        }   // Stone Tools Lv2 -> Lv3
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.StoneT4Set); i++) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.StoneT4Set[i])
+                    .pattern("010")
+                    .pattern("1T1")
+                    .pattern("010")
+                    .define('0', ModBlocks.COBBLED_STONE_BRICKS.get()).define('1', ModBlocks.COMPRESSED_STONE.get())
+                    .define('T', recipeLines.StoneT3Set[i])
+                    .unlockedBy(getHasName(recipeLines.StoneT3Set[i]), has(recipeLines.StoneT3Set[i]))
+                    .save(pWriter);
+        }   // Stone Tools Lv3 -> Lv4
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.StoneT5Set); i++) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.StoneT5Set[i])
+                    .pattern(" 1 ")
+                    .pattern("0T0")
+                    .pattern(" 0 ")
+                    .define('0', ModBlocks.COMPRESSED_STONE.get()).define('1', ModBlocks.STONE_CORE_BLOCK.get())
+                    .define('T', recipeLines.StoneT4Set[i])
+                    .unlockedBy(getHasName(recipeLines.StoneT4Set[i]), has(recipeLines.StoneT4Set[i]))
+                    .save(pWriter);
+        }   // Stone Tools Lv4 -> Lv5
     }
 }
