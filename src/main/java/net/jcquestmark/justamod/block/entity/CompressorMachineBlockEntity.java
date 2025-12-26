@@ -149,8 +149,8 @@ public class CompressorMachineBlockEntity extends BlockEntity implements MenuPro
         if(hasRecipe()) {
             if(checkFuel()) {
                 increaseCompressingProgress();
-                setChanged(pLevel, pPos, pState);
                 setLit(pState, true);
+                setChanged(pLevel, pPos, pState);
             } else {
                 loseProgress();
                 setLit(pState, false);

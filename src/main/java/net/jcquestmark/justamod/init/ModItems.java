@@ -1,7 +1,6 @@
 package net.jcquestmark.justamod.init;
 
 import net.jcquestmark.justamod.JustAMod;
-import net.jcquestmark.justamod.item.fuels.FuelItem;
 import net.jcquestmark.justamod.item.fuels.RoughPowerCoalItem;
 import net.jcquestmark.justamod.item.tools.stoneline.*;
 import net.jcquestmark.justamod.item.tools.woodenline.*;

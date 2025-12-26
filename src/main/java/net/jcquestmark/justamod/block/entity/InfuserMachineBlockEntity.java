@@ -147,8 +147,8 @@ public class InfuserMachineBlockEntity extends BlockEntity implements MenuProvid
         if(hasRecipe()) {
             if(checkFuel()) {
                 increaseInfusingProgress();
-                setChanged(pLevel, pPos, pState);
                 setLit(pState, true);
+                setChanged(pLevel, pPos, pState);
             } else {
                 loseProgress();
                 setLit(pState, false);

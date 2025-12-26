@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.jcquestmark.justamod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "PlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "${mod_id}.refmap.json"
+}
