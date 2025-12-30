@@ -106,7 +106,13 @@ public class InfusingRecipe implements Recipe<SimpleContainer> {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
 
             for(int i = 0; i < inputs.size(); i++) {
-                Ingredient ingredient = getIngredient(ingredients.get(i).getAsJsonObject());
+                Ingredient ingredient;
+                try {
+                    ingredient = getIngredient(ingredients.get(i).getAsJsonObject());
+                } catch (Exception e) {
+                    ingredient = Ingredient.EMPTY;
+                }
+
                 inputs.set(i, ingredient);
             }
 

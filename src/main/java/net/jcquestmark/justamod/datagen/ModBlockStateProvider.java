@@ -23,6 +23,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COBBLED_STONE_BRICKS);
         blockWithItem(ModBlocks.COMPRESSED_STONE);
         blockWithItem(ModBlocks.STONE_CORE_BLOCK);
+        blockWithItem(ModBlocks.STEEL_BLOCK);
+        blockWithItem(ModBlocks.CARBON_STEEL_BLOCK);
 
         blockWithItem(ModBlocks.MACHINE_BASE);
 

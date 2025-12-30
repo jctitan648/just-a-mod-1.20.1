@@ -7,15 +7,26 @@
   "block.justamod.compressed_planks": "Compressed Wooden Planks",
   "block.justamod.double_compressed_wood": "Double Compressed Wood",
   "block.justamod.wood_conglomerate": "Wood Conglomerate",
-  "item.justamod.wooden_core": "Lignum Core",
+  "item.justamod.wooden_core": "Core Lignea",
 
   "block.justamod.cobbled_stone_bricks": "Cobbled Stone Bricks",
   "block.justamod.compressed_stone": "Compressed Stone",
   "block.justamod.stone_core_block": "Stone Core Block",
   "item.justamod.chipped_stone_core": "Chipped Stone Core",
-  "item.justamod.gilded_stone_core": "Lapis Aureus Core",
+  "item.justamod.gilded_stone_core": "Core Lapidis Aurati",
+
+  "item.justamod.steel_ingot": "Steel Ingot",
+  "item.justamod.steel_nugget": "Steel Nugget",
+  "block.justamod.steel_block": "Steel Block",
+  "item.justamod.carbon_steel_ingot": "Carbonized Steel Ingot",
+  "item.justamod.carbon_steel_piece": "Carbonized Steel Piece",
+  "block.justamod.carbon_steel_block": "Carbonized Steel Block",
+  "item.justamod.small_steel_spike": "Small Steel Spike",
+  "item.justamod.steel_spike_bunch": "Steel Spike Bunch",
+  "item.justamod.reinforced_steel_core": "Core Ferro Aucti",
 
   "item.justamod.rough_power_coal": "Rough Power Coal",
+  "item.justamod.power_coal": "Power Coal",
 
   "item.justamod.wooden_sword_t2": "Wooden Sword",
   "item.justamod.wooden_sword_t3": "Wooden Sword",
@@ -77,11 +88,55 @@
   "item.justamod.stone_hoe_t5": "Stone Hoe",
   "item.justamod.stone_hoe_t6": "Stone Hoe",
 
+  "item.justamod.iron_sword_t2": "Iron Sword",
+  "item.justamod.iron_sword_t3": "Iron Sword",
+  "item.justamod.iron_sword_t4": "Iron Sword",
+  "item.justamod.iron_sword_t5": "Iron Sword",
+  "item.justamod.iron_sword_t6": "Iron Sword",
+  "item.justamod.iron_sword_t7": "Iron Sword",
+  "item.justamod.iron_sword_t8": "Iron Sword",
+
+  "item.justamod.iron_axe_t2": "Iron Axe",
+  "item.justamod.iron_axe_t3": "Iron Axe",
+  "item.justamod.iron_axe_t4": "Iron Axe",
+  "item.justamod.iron_axe_t5": "Iron Axe",
+  "item.justamod.iron_axe_t6": "Iron Axe",
+  "item.justamod.iron_axe_t7": "Iron Axe",
+  "item.justamod.iron_axe_t8": "Iron Axe",
+
+  "item.justamod.iron_pickaxe_t2": "Iron Pickaxe",
+  "item.justamod.iron_pickaxe_t3": "Iron Pickaxe",
+  "item.justamod.iron_pickaxe_t4": "Iron Pickaxe",
+  "item.justamod.iron_pickaxe_t5": "Iron Pickaxe",
+  "item.justamod.iron_pickaxe_t6": "Iron Pickaxe",
+  "item.justamod.iron_pickaxe_t7": "Iron Pickaxe",
+  "item.justamod.iron_pickaxe_t8": "Iron Pickaxe",
+
+  "item.justamod.iron_shovel_t2": "Iron Shovel",
+  "item.justamod.iron_shovel_t3": "Iron Shovel",
+  "item.justamod.iron_shovel_t4": "Iron Shovel",
+  "item.justamod.iron_shovel_t5": "Iron Shovel",
+  "item.justamod.iron_shovel_t6": "Iron Shovel",
+  "item.justamod.iron_shovel_t7": "Iron Shovel",
+  "item.justamod.iron_shovel_t8": "Iron Shovel",
+
+  "item.justamod.iron_hoe_t2": "Iron Hoe",
+  "item.justamod.iron_hoe_t3": "Iron Hoe",
+  "item.justamod.iron_hoe_t4": "Iron Hoe",
+  "item.justamod.iron_hoe_t5": "Iron Hoe",
+  "item.justamod.iron_hoe_t6": "Iron Hoe",
+  "item.justamod.iron_hoe_t7": "Iron Hoe",
+  "item.justamod.iron_hoe_t8": "Iron Hoe",
+
+  "attribute.justamod.critical_chance": "Critical Chance",
+  "attribute.justamod.critical_damage": "Critical Damage",
+
   "block.justamod.material_machine_base": "Machine Base",
   "tooltip.justamod.machine_base": "§7A basic base for all machines",
 
   "block.justamod.material_compressor": "Material Compressor",
   "block.justamod.material_infuser": "Material Infuser",
+  "block.justamod.material_duplicator": "Material Duplicator",
 
   "tooltip.justamod.tier1": "§7Tier 1",
   "tooltip.justamod.tier2": "§7Tier 2",
@@ -98,6 +153,8 @@
   "tooltip.justamod.lv2": "§7Level 2",
 
   "tooltip.justamod.fuel_800": "§7Machine Fuel: 800",
+  "tooltip.justamod.fuel_4000": "§7Machine Fuel: 4000",
+  "tooltip.justamod.fuel_8000": "§7Machine Fuel: 8000",
 
   "block.justamod.sapphire_block": "Block of Sapphire"
 }

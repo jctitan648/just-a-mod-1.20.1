@@ -28,7 +28,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 .add(ModBlocks.COBBLED_STONE_BRICKS.get())
                 .add(ModBlocks.COMPRESSED_STONE.get())
-                .add(ModBlocks.STONE_CORE_BLOCK.get());
+                .add(ModBlocks.STONE_CORE_BLOCK.get())
+
+                .add(ModBlocks.STEEL_BLOCK.get())
+                .add(ModBlocks.CARBON_STEEL_BLOCK.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.COMPRESSED_PLANKS.get())
@@ -39,9 +42,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MACHINE_BASE.get())
                 .add(ModBlocks.COMPRESSOR_T1_MACHINE.get())
-                .add(ModBlocks.INFUSER_T1_MACHINE.get());
+                .add(ModBlocks.INFUSER_T1_MACHINE.get())
+                .add(ModBlocks.STEEL_BLOCK.get());
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.SAPPHIRE_BLOCK.get());
+                .add(ModBlocks.SAPPHIRE_BLOCK.get())
+                .add(ModBlocks.CARBON_STEEL_BLOCK.get());
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 ;
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)

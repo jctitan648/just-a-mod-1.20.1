@@ -40,6 +40,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> STONE_CORE_BLOCK = registerBlock("stone_core_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(20F, 90F)));
 
+    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6F, 8F)));
+    public static final RegistryObject<Block> CARBON_STEEL_BLOCK = registerBlock("carbon_steel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(9F, 16F)));
+
     public static final RegistryObject<Block> COMPRESSOR_T1_MACHINE = registerBlock("material_compressor",
             () -> new CompressorT1MachineBlock());
     public static final RegistryObject<Block> INFUSER_T1_MACHINE = registerBlock("material_infuser",

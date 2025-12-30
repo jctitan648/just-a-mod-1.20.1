@@ -57,6 +57,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.COBBLED_STONE_BRICKS.get()), has(ModBlocks.COBBLED_STONE_BRICKS.get()))
                 .save(pWriter);     // Compressed Stone
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get())
+                .requires(ModItems.STEEL_INGOT.get(), 9)
+                .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
+                .save(pWriter);     // Steel Ingot -> Steel Block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STEEL_INGOT.get())
+                .requires(ModItems.STEEL_NUGGET.get(), 9)
+                .unlockedBy(getHasName(ModItems.STEEL_NUGGET.get()), has(ModItems.STEEL_NUGGET.get()))
+                .save(pWriter);     // Steel Nugget -> Steel Ingot
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STEEL_NUGGET.get(), 9)
+                .requires(ModItems.STEEL_INGOT.get())
+                .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
+                .save(pWriter);     // Steel Ingot -> Steel Nugget
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STEEL_SPIKE_BUNCH.get())
+                .pattern("111")
+                .pattern("111")
+                .pattern("000")
+                .define('0',ModBlocks.STEEL_BLOCK.get()).define('1',ModItems.SMALL_STEEL_SPIKE.get())
+                .unlockedBy(getHasName(ModItems.SMALL_STEEL_SPIKE.get()), has(ModItems.SMALL_STEEL_SPIKE.get()))
+                .save(pWriter);     // Steel Spike Bunch
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ROUGH_POWER_COAL.get())
                 .pattern("101")
                 .pattern("010")
@@ -172,5 +193,56 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(recipeLines.StoneT4Set[i]), has(recipeLines.StoneT4Set[i]))
                     .save(pWriter);
         }   // Stone Tools Lv4 -> Lv5
+
+        for (int i = 0; i < recipeLines.getTierSetLength(RecipeLines.TierSet.IronT8Set); i++) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.IronT2Set[i])
+                    .pattern("000")
+                    .pattern("0T0")
+                    .pattern("000")
+                    .define('0', Items.IRON_INGOT)
+                    .define('T', recipeLines.IronT1Set[i])
+                    .unlockedBy(getHasName(recipeLines.IronT1Set[i]), has(recipeLines.IronT1Set[i]))
+                    .save(pWriter); // Lv1 -> Lv2
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.IronT3Set[i])
+                    .pattern("010")
+                    .pattern("1T1")
+                    .pattern("010")
+                    .define('0', Items.IRON_INGOT).define('1', Blocks.IRON_BLOCK)
+                    .define('T', recipeLines.IronT2Set[i])
+                    .unlockedBy(getHasName(recipeLines.IronT2Set[i]), has(recipeLines.IronT2Set[i]))
+                    .save(pWriter); // Lv2 -> Lv3
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.IronT4Set[i])
+                    .pattern("000")
+                    .pattern("0T0")
+                    .pattern("000")
+                    .define('0', Items.IRON_BLOCK)
+                    .define('T', recipeLines.IronT3Set[i])
+                    .unlockedBy(getHasName(recipeLines.IronT3Set[i]), has(recipeLines.IronT3Set[i]))
+                    .save(pWriter); // Lv3 -> Lv4
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.IronT5Set[i])
+                    .pattern("000")
+                    .pattern("0T0")
+                    .pattern("000")
+                    .define('0', ModBlocks.STEEL_BLOCK.get())
+                    .define('T', recipeLines.IronT4Set[i])
+                    .unlockedBy(getHasName(recipeLines.IronT4Set[i]), has(recipeLines.IronT4Set[i]))
+                    .save(pWriter); // Lv4 -> Lv5
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.IronT6Set[i])
+                    .pattern("010")
+                    .pattern("0T0")
+                    .pattern("010")
+                    .define('0', ModItems.STEEL_SPIKE_BUNCH.get()).define('1', ModItems.CARBON_STEEL_INGOT.get())
+                    .define('T', recipeLines.IronT5Set[i])
+                    .unlockedBy(getHasName(recipeLines.IronT5Set[i]), has(recipeLines.IronT5Set[i]))
+                    .save(pWriter); // Lv5 -> Lv6
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, recipeLines.IronT7Set[i])
+                    .pattern("000")
+                    .pattern("1T1")
+                    .pattern("000")
+                    .define('0', ModItems.CARBON_STEEL_INGOT.get()).define('1', ModBlocks.CARBON_STEEL_BLOCK.get())
+                    .define('T', recipeLines.IronT6Set[i])
+                    .unlockedBy(getHasName(recipeLines.IronT6Set[i]), has(recipeLines.IronT6Set[i]))
+                    .save(pWriter); // Lv6 -> Lv7
+        }   // Iron Tool Line
     }
 }

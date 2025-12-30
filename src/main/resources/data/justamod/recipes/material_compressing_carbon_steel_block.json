@@ -1,0 +1,26 @@
+{
+  "type": "justamod:material_compressing",
+  "ingredients": [
+    {
+      "item": "justamod:carbon_steel_ingot",
+      "count": 3
+    },
+    {
+      "item": "justamod:carbon_steel_ingot",
+      "count": 3
+    },
+    {
+      "item": "justamod:carbon_steel_ingot",
+      "count": 3
+    },
+    {
+      "item": "justamod:carbon_steel_ingot",
+      "count": 3
+    }
+  ],
+  "compressing_time": 840,
+  "result": {
+    "item": "justamod:carbon_steel_block",
+    "count": 1
+  }
+}

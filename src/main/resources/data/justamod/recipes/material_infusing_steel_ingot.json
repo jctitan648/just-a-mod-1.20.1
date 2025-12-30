@@ -1,0 +1,16 @@
+{
+  "type": "justamod:material_infusing",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "infusing_time": 200,
+  "result": {
+    "item": "justamod:steel_ingot",
+    "count": 1
+  }
+}

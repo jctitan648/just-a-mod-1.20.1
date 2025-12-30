@@ -1,0 +1,16 @@
+{
+  "type": "justamod:material_infusing",
+  "ingredients": [
+    {
+      "item": "justamod:iron_hoe_t7"
+    },
+    {
+      "item": "justamod:reinforced_steel_core"
+    }
+  ],
+  "infusing_time": 1800,
+  "result": {
+    "item": "justamod:iron_hoe_t8",
+    "count": 1
+  }
+}

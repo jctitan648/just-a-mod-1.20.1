@@ -185,6 +185,12 @@ public class InfuserMachineBlockEntity extends BlockEntity implements MenuProvid
         if(this.itemHandler.getStackInSlot(FUEL_SLOT).getItemHolder().containsTag(ModTags.Items.FUEL_800)) {
             return 800;
         }
+        if(this.itemHandler.getStackInSlot(FUEL_SLOT).getItemHolder().containsTag(ModTags.Items.FUEL_4000)) {
+            return 4000;
+        }
+        if(this.itemHandler.getStackInSlot(FUEL_SLOT).getItemHolder().containsTag(ModTags.Items.FUEL_8000)) {
+            return 8000;
+        }
 
         return 0;
     }

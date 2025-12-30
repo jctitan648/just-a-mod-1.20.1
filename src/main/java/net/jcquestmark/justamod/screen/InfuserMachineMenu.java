@@ -57,7 +57,7 @@ public class InfuserMachineMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
-        int progressArrowSize = 25;
+        int progressArrowSize = 24;
 
         return maxProgress != 0 && progress != 0 ?  2 + (progress * progressArrowSize / maxProgress) : 0;
     }

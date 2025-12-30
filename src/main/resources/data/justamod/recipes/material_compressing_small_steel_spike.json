@@ -1,0 +1,18 @@
+{
+  "type": "justamod:material_compressing",
+  "ingredients": [
+    {
+      "item": "justamod:carbon_steel_piece",
+      "count": 1
+    },
+    {
+      "item": "justamod:steel_nugget",
+      "count": 18
+    }
+  ],
+  "compressing_time": 120,
+  "result": {
+    "item": "justamod:small_steel_spike",
+    "count": 1
+  }
+}

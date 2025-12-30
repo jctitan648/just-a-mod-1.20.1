@@ -1,0 +1,26 @@
+{
+  "type": "justamod:material_compressing",
+  "ingredients": [
+    {
+      "item": "justamod:rough_power_coal",
+      "count": 1
+    },
+    {
+      "item": "justamod:rough_power_coal",
+      "count": 1
+    },
+    {
+      "item": "justamod:rough_power_coal",
+      "count": 1
+    },
+    {
+      "item": "justamod:rough_power_coal",
+      "count": 1
+    }
+  ],
+  "compressing_time": 100,
+  "result": {
+    "item": "justamod:power_coal",
+    "count": 1
+  }
+}

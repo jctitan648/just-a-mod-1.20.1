@@ -1,0 +1,26 @@
+{
+  "type": "justamod:material_compressing",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_block",
+      "count": 16
+    },
+    {
+      "item": "justamod:carbon_steel_block",
+      "count": 2
+    },
+    {
+      "item": "justamod:carbon_steel_block",
+      "count": 2
+    },
+    {
+      "item": "justamod:steel_block",
+      "count": 16
+    }
+  ],
+  "compressing_time": 1800,
+  "result": {
+    "item": "justamod:reinforced_steel_core",
+    "count": 1
+  }
+}
